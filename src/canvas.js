@@ -25,7 +25,7 @@ class Canvas {
       const y = configs.xy[1];
       this.node.width = w;
       this.node.height = h;
-      this.node.getContext('2d').drawImage(videoNode, x, y, w, h);
+      this.node.getContext('2d').drawImage(videoNode, x, y, w, h, 0, 0, w, h);
       if (configs.returnType === OBJECT_URL_TYPE) {
         this.node.toBlob(blob => resolve(blob));
       } else if (configs.returnType === DATA_URL_TYPE) {
